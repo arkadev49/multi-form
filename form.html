@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<form onsubmit="onSubmit(event)">
+  <h1>Subject Registration Form - Admin Only</h1>
+  <hr>
+  <div class="subject-box-list">
+    <div class="subject-box">
+      <h2>Subject</h2>
+      <hr>
+      <label for="code">Subject Code : </label>
+      <input type="text" name="code" id="code" placeholder="Code">
+      <br><br>
+      <label for="code">Stream : </label>
+      <input type="text" name="stream" id="stream" placeholder="Stream">
+      <br><br>
+      <label for="code">Semester : </label>
+      <input type="number" name="sem" id="sem" placeholder="Semester">
+      <br><br>
+      <div class="name-box">
+        <span>Subject Name</span><br><br>
+        <hr>
+        <div class="name-box-items">
+          <div class="name-box-item">
+            <label>Subject Name : </label>&nbsp;&nbsp;
+            <input type="text" name="name">&nbsp;&nbsp;
+            <button type="button" onclick="nameAddButtonClick(event)" class="plus name-add-btn">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="subject-box-controls">
+        <button type="button" onclick="subjectAddButtonClick(event)" class="add-subject-btn">+</button>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <div class="controls">
+    <button class="submit-btn" onclick="onSubmit(event)" type="submit">SUBMIT</button>&nbsp;&nbsp;
+    <button class="reset-btn" type="button" onclick="window.location.reload()">RESET</button>
+  </div>
+</form>
+
+<script src="form.js"></script>
+</body>
+
+</html>
